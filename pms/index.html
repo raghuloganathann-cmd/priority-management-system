@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Priority Management System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <h1>Priority Management System</h1>
+  <p class="sub">Add tasks, set a priority, and work through the most important ones first.</p>
+
+  <div class="stats" id="stats"></div>
+
+  <div class="add">
+    <input type="text" id="title" placeholder="Task title" maxlength="120" aria-label="Task title">
+    <select id="priority" aria-label="Priority">
+      <option>High</option><option selected>Medium</option><option>Low</option>
+    </select>
+    <input type="date" id="due" aria-label="Due date">
+    <button class="primary" id="addBtn">Add task</button>
+  </div>
+
+  <div class="bar">
+    <input class="grow" type="text" id="search" placeholder="Search tasks" aria-label="Search tasks">
+    <select id="filter" aria-label="Filter by status">
+      <option value="all">All</option><option value="active">Active</option><option value="done">Completed</option>
+    </select>
+    <select id="sort" aria-label="Sort tasks">
+      <option value="priority">Sort: Priority</option><option value="due">Sort: Due date</option><option value="created">Sort: Newest</option>
+    </select>
+  </div>
+
+  <ul id="list"></ul>
+
+  <div class="foot">
+    <span id="count"></span>
+    <button id="clearDone">Clear completed</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
